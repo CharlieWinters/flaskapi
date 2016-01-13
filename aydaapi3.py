@@ -3,7 +3,7 @@ from flask.ext.restless import APIManager
 from flask.ext.sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
-
+#test
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///people.db'
 app.config['DEBUG'] = True
 db = SQLAlchemy(app)
