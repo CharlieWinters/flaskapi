@@ -2,10 +2,10 @@ from flask import Flask
 from flask.ext.restless import APIManager
 from flask.ext.sqlalchemy import SQLAlchemy
 
-app = Flask(__name__)
+application = Flask(__name__)
 #test
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///people.db'
-app.config['DEBUG'] = True
+application.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///people.db'
+application.config['DEBUG'] = True
 db = SQLAlchemy(app)
 
 class Person(db.Model):
@@ -27,4 +27,4 @@ api_manager.create_api(Person, methods=['GET', 'POST', 'DELETE', 'PUT'])
 api_manager.create_api(Datapoints, methods=['GET', 'POST', 'DELETE', 'PUT'])
 
 if __name__ == "__main__":
-    app.run()
+    application.run(host = )
